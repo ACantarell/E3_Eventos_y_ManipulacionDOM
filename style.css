@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: crimson;
+  margin: 0.5rem;
+  text-shadow: 3px 0px 11px rgba(225, 18, 77, 0.93);
+}
+
+#pizzaIdInput {
+  text-align: center;
+  padding: 0.5rem;
+  font-weight: bold;
+  color: rgba(70, 61, 61, 0.562);
+  font-size: 1rem;
+  border: none;
+  border-radius: 1rem;
+  margin: 1rem;
+}
+
+#searchButton {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: crimson;
+}
+
+.pizza-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px auto;
+  width: 380px;
+  background-color: none;
+  animation:rotate-scale-up-hor .65s linear both
+}
+
+@keyframes rotate-scale-up-hor{0%{transform:scale(1) rotateX(0)}50%{transform:scale(2) rotateX(-180deg)}100%{transform:scale(1) rotateX(-360deg)}}
+
+.pizza-card img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 2rem;
+}
+
+.pizza-card h2 {
+  color: #f35d64;
+  padding: 5px;
+}
+
+.pizza-card p {
+  font-weight: bold;
+  color: #f35d64;
+  padding: 1rem;
+}
+
+.error-message {
+  font-size: 1.5rem;
+  color: red;
+  font-weight: bold;
+  animation:scale-up-hor-center .4s cubic-bezier(.39,.575,.565,1.000) both
+}
+
+@keyframes scale-up-hor-center{0%{transform:scaleX(.4)}100%{transform:scaleX(1)}}
